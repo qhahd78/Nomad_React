@@ -2,6 +2,11 @@ import React from 'react';
 
 // React.Component 클래스를 상속 받음.
 class App extends React.Component {
+  constructor(props) {
+    super(props);
+    console.log('hello');
+  }
+
   state ={
     count: 0,
   };
@@ -13,6 +18,14 @@ class App extends React.Component {
     }));
   };
 
+  componentDidMount(){
+    console.log('component rendered');
+  }
+
+  componentDidUpdate(){
+    console.log('I just updated');
+  }
+
   minus = () => {
     this.setState(current =>({
       count: current.count-1,
@@ -20,6 +33,7 @@ class App extends React.Component {
   };
 
   render() {
+    console.log("I'm rendering");
     return (
       <div>
         <h1>The number is : {this.state.count}</h1>
