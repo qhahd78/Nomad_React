@@ -4,6 +4,7 @@ import './App.css';
 import { HashRouter, Route } from 'react-router-dom';
 import About from './routes/About';
 import Home from './routes/Home';
+import Search from './routes/Search';
 import Navigation from './components/Navigation';
 import Detail from './routes/Detail';
 // React.Component 클래스를 상속 받음.
@@ -16,6 +17,7 @@ function App(){
       <Route path="/" exact={true} component={Home} /> 
       <Route path="/about" component={About}/>
       <Route path="/movie-detail" component={Detail} />
+      <Route path="/search" component={Search} />
     </HashRouter>  
   );
 }
